@@ -1,0 +1,50 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ this.page.title }}</title>
+    {% styles %}
+    <!--
+        css link
+  -->
+    <link rel="stylesheet" href="{{ './assets/css/normalize.css'|theme }}">
+
+    <!--
+        fonts link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="{{ './assets/css/swiper-bundle.min.css'|theme }}" />
+
+    <!--
+        css link
+  -->
+    <link rel="stylesheet" href="{{ './assets/css/style.css'|theme }}">
+</head>
+
+<body>
+
+    {% partial 'header' %}
+
+    {% page %}
+
+    {% partial 'footer' %}
+
+
+    <!-- Swiper JS -->
+    <script src="{{ './assets/js/swiper-bundle.min.js'|theme }}"></script>
+    <script src="{{ './assets/js/index.js'|theme }}"></script>
+
+    {% framework extras %}
+    {% scripts %}
+</body>
+
+</html>
